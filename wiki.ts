@@ -60,7 +60,7 @@ function getReqPromise(getUrl) {
     if (userAgent) {
         headers['User-Agent'] = userAgent;
     }
-    return axios.get(getUrl);
+    return axios.get(getUrl, {headers: headers});
 }
 
 function translateReqPromise(promise) {
